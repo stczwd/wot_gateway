@@ -4,7 +4,7 @@ import json
 
 def is_hwid_existed(id):
 	# file must exist first
-	f = open('cfg/gw_json.cfg','r')
+	f = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','r')
 	strdata = f.read()
 	dic = json.loads(strdata)
 
