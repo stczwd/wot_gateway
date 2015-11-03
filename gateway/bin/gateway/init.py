@@ -39,7 +39,7 @@ def rd_local_cfg():
 	global url_control
 	global url_camera
 	
-	for line in open("cfg/local.cfg"):
+	for line in open("/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/local.cfg"):
 		l = line.strip().split('=')
 		if l[0] == 'serverIP':
 			host = l[1]
@@ -103,6 +103,6 @@ def rd_local_cfg():
 	url_watchdog = hostandport + url_watchdog
 
 def rd_main_cfg():
-	f = open('main.cfg','r')
+	f = open('/mnt/usb/wot_gateway/gateway/bin/gateway/main.cfg','r')
 	return f.read()
 	
