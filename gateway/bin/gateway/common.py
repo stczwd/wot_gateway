@@ -4,7 +4,7 @@ import json
 
 def is_hwid_existed(id):
 	# file must exist first
-	f = open('cfg/gw_json.cfg','r')
+	f = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','r')
 	strdata = f.read()
 	dic = json.loads(strdata)
 
@@ -14,7 +14,7 @@ def is_hwid_existed(id):
 		return False
 
 def is_mwid_existed(hwid):
-	f = open('cfg/gw_json.cfg','r')
+	f = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','r')
 	strdata = f.read()
 	dic = json.loads(strdata)
 
@@ -24,7 +24,7 @@ def is_mwid_existed(hwid):
 		return ''
 
 def is_updated():
-	f = open('cfg/gw_json.cfg','r')
+	f = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','r')
 	strdata = f.read()
 	dic = json.loads(strdata)
 
@@ -34,11 +34,11 @@ def is_updated():
 		return False
 
 def wr_settings(data,devid,flag):
-	fr = open('cfg/gw_json.cfg','r')
+	fr = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','r')
 	dic = json.loads(fr.read())
 	fr.close()
 
-	fw = open('cfg/gw_json.cfg','w')
+	fw = open('/mnt/usb/wot_gateway/gateway/bin/gateway/cfg/gw_json.cfg','w')
 	if flag == 0:
 		# write hwid		
 		dic['hwid'] = data	
@@ -65,10 +65,10 @@ def sensor_data():
 	return random.randint(1,100)
 
 def rd_prop(filename):
-	f = open(filename,'r')
+	f = open(/mnt/usb/wot_gateway/gateway/bin/gateway/filename,'r')
 	return f.read()
 	
 
 def clear_file(filename):
-	f = open(filename,'w')
+	f = open(/mnt/usb/wot_gateway/gateway/bin/gateway/filename,'w')
 	f.write('')
